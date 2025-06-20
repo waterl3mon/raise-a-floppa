@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Floppa Empire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui">
+        🐾 Монеты: <span id="coins">1000000</span><br>
+        ❤️ Счастье: <span id="happiness">100</span><br>
+        🍎 Голод: <span id="hunger">100</span><br>
+        🏠 База: <span id="baseLevel">1</span> уровень<br>
+        ⚡ Доход/сек: <span id="autoIncome">0</span><br>
+        📍 Локация: <span id="location">Дом</span><br>
+        <div id="itemsStatus" style="margin-top: 10px;">Предметы:<br></div>
+    </div>
+    <div id="controls">
+        <button onclick="upgradeBase()">Улучшить базу (<span id="baseCost">100</span> монет)</button>
+        <button onclick="changeLocation('park')">Пойти в парк (500 монет)</button>
+        <button onclick="changeLocation('shop')">Пойти в магазин (1000 монет)</button>
+        <button onclick="showMenu()">Меню улучшений</button>
+    </div>
+    <div id="eventModal" class="event-modal"></div>
+    <div id="menuModal" class="event-modal"></div>
+    <audio id="errorSound" src="sounds/not-enough-or-already-have.mp3"></audio>
+    <audio id="buySound" src="sounds/buying.mp3"></audio>
+    <audio id="enterSound" src="sounds/hit-strange-locations.mp3"></audio>
+    <audio id="clickfloppa" src="sounds/click.mp3"></audio>
+    <audio id="home" src="sounds/undertale_022. Snowdin Town.mp3"></audio>
+    <audio id="bossMusic" src="sounds/undertale_027. Dating Fight!.mp3" loop></audio>
+    <script src="game.js"></script>
+    <div id="locationModal" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; border:1px solid black;">
+        <!-- Content will be dynamically populated -->
+    </div>
+    <button onclick="showLocationMenu()" style="position:absolute; top:10px; left:10px;">Локации</button>
+</body>
+</html>
+
