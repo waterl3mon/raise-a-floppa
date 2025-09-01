@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Floppa Empire</title>
+    <title>Raise A Floppa!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
     <div id="ui">
-        🐾 Монеты: <span id="coins">1000000</span><br>
-        ❤️ Счастье: <span id="happiness">100</span><br>
-        🍎 Голод: <span id="hunger">100</span><br>
-        🏠 База: <span id="baseLevel">1</span> уровень<br>
-        ⚡ Доход/сек: <span id="autoIncome">0</span><br>
-        📍 Локация: <span id="location">Дом</span><br>
-        <div id="itemsStatus" style="margin-top: 10px;">Предметы:<br></div>
+        🐾 Coins: <span id="coins">0</span><br>
+        ❤️ Happiness: <span id="happiness">100</span><br>
+        🍎 Hunger: <span id="hunger">100</span><br>
+        🏠 Base: <span id="baseLevel">1</span> level<br>
+        ⚡ Income per sec: <span id="autoIncome">0</span><br>
+        📍 Location: <span id="location">Дом</span><br>
+        <div id="itemsStatus" style="margin-top: 10px;">Items:<br></div>
     </div>
     <div id="controls">
-        <button onclick="upgradeBase()">Улучшить базу (<span id="baseCost">100</span> монет)</button>
+        <button onclick="upgradeBase()">Improve the base (<span id="baseCost">100</span> монет)</button>
         <button onclick="changeLocation('park')">Пойти в парк (500 монет)</button>
         <button onclick="changeLocation('shop')">Пойти в магазин (1000 монет)</button>
         <button onclick="showMenu()">Меню улучшений</button>
@@ -33,7 +33,7 @@
     <div id="locationModal" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; border:1px solid black;">
         <!-- Content will be dynamically populated -->
     </div>
-    <button onclick="showLocationMenu()" style="position:absolute; top:10px; left:10px;">Локации</button>
+    <button onclick="showLocationMenu()" style="position:absolute; top:10px; left:10px;">Locations</button>
 </body>
 </html>
 
